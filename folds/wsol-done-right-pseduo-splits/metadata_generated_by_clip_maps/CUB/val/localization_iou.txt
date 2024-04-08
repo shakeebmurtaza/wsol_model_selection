@@ -1,0 +1,1 @@
+IoU Performance: 68.80758824584821
