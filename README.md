@@ -1,17 +1,5 @@
 ## Pytorch code for: `Realistic Model Selection for Weakly Supervised Object Localization`
 
-### Citation:
-```
-@InProceedings{murtaza_2024_wsol_model_selection,
-  title   = {Realistic Model Selection for Weakly Supervised Object Localization},
-  author  = {S. Murtaza and S. Belharbi and M. Pedersoli and E. Granger},
-  journal = {CoRR},
-  year    = {2024}
-}
-```
-
-### Issues:
-Please create a github issue.
 
 ## Requirements
 See full requirements at [./dependencies/requirements.txt](./dependencies/requirements.txt)
