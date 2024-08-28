@@ -1,9 +1,9 @@
 # [A Realistic Protocol for Evaluation of Weakly Supervised Object Localization](https://arxiv.org/pdf/2404.10034)
 
 
-by Shakeeb Murtaza, Soufiane Belharbi, Marco Pedersoli, Eric Granger
+by Shakeeb Murtaza<sup>1</sup>, Soufiane Belharbi<sup>1</sup>, Marco Pedersoli<sup>1</sup>, Eric Granger<sup>1</sup>
 
-LIVIA, Dept. of Systems Engineering, ETS Montreal, Canada
+<sup>1</sup>  LIVIA, Dept. of Systems Engineering, ETS Montreal, Canada
 <br/>
 
 
@@ -21,7 +21,7 @@ Weakly Supervised Object Localization (WSOL) allows training deep learning model
   title   = {Realistic Model Selection for Weakly Supervised Object Localization},
   author  = {S. Murtaza and S. Belharbi and M. Pedersoli and E. Granger},
   journal = {CoRR},
-  volume  = {arXiv preprint arXiv:2404.10034},
+  volume  = {abs/2404.10034},
   year    = {2024}
 }
 ```
