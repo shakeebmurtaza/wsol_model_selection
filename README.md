@@ -1,19 +1,39 @@
-## Pytorch code for: `Realistic Model Selection for Weakly Supervised Object Localization`
+# [A Realistic Protocol for Evaluation of Weakly Supervised Object Localization](https://arxiv.org/pdf/2404.10034)
+
+
+by Shakeeb Murtaza, Soufiane Belharbi, Marco Pedersoli, Eric Granger
+
+LIVIA, Dept. of Systems Engineering, ETS Montreal, Canada
+<br/>
+
+
+[![arXiv](https://img.shields.io/badge/arXiv-2404.10034-b31b1b.svg)](https://arxiv.org/pdf/2404.10034)
+
+<p align="center"><img src="doc/wsol_eval_issue.jpg" alt="outline" width="70%"></p>
+
+## Abstract
+Weakly Supervised Object Localization (WSOL) allows training deep learning models for classification and localization (LOC) using only global class-level labels. The absence of bounding box (bbox) supervision during training raises challenges in the literature for hyper-parameter tuning, model selection, and evaluation. WSOL methods rely on a validation set with bbox annotations for model selection, and a test set with bbox annotations for threshold estimation for producing bboxes from localization maps. This approach, however, is not aligned with the WSOL setting as these annotations are typically unavailable in real-world scenarios. Our initial empirical analysis shows a significant decline in LOC performance when model selection and threshold estimation rely solely on class labels and the image itself, respectively, compared to using manual bbox annotations. This highlights the importance of incorporating bbox labels for optimal model performance. In this paper, a new WSOL evaluation protocol is proposed that provides LOC information without the need for manual bbox annotations. In particular, we generated noisy pseudo-boxes from a pretrained off-the-shelf region proposal method such as Selective Search, CLIP, and RPN for model selection. These bboxes are also employed to estimate the threshold from LOC maps, circumventing the need for test-set bbox annotations. Our experiments with several WSOL methods on ILSVRC and CUB datasets show that using the proposed pseudo-bboxes for validation facilitates the model selection and threshold estimation, with LOC performance comparable to those selected using GT bboxes on the validation set and threshold estimation on the test set. It also outperforms models selected using class-level labels, and then dynamically thresholded based solely on LOC maps.
+
 
 ### Citation:
 ```
-@InProceedings{murtaza_2024_wsol_model_selection,
+@article{murtaza24,
   title   = {Realistic Model Selection for Weakly Supervised Object Localization},
   author  = {S. Murtaza and S. Belharbi and M. Pedersoli and E. Granger},
   journal = {CoRR},
+  volume  = {arXiv preprint arXiv:2404.10034},
   year    = {2024}
 }
 ```
 
-### Issues:
-Please create a github issue.
+## Content:
+<!-- * [Overview](#overview) -->
+* [Requirements](#requirements)
+* [Pseudo-Bboxes Annotations](#annon)
+* [Download datasets](#datasets)
+* [Run code](#run)
 
-## Requirements
+## <a name="requirements"> Requirements</a>:
 See full requirements at [./dependencies/requirements.txt](./dependencies/requirements.txt)
 
 * Python
@@ -33,7 +53,7 @@ cd dlib/crf/crfwrapper/colorbilateralfilter
 swig -python -c++ colorbilateralfilter.i
 python setup.py install
 ```
-## <a name="Pseudo-Bboxes Annotations"> Pseudo-Bboxes Annotations</a>:
+## <a name="annon"> Pseudo-Bboxes Annotations</a>:
 * For validation, bounding box annotations can be found at:
 * Bounding boxes annotation for validation can be used it one run that we produced is available at:
     * Bboxes annotations for **ILSVRC**: [./folds/wsol-done-right-pseduo-splits/metadata_generated_by_selective_search_bboxs/ILSVRC/val](./folds/wsol-done-right-pseduo-splits/metadata_generated_by_selective_search_bboxs/ILSVRC/val)
@@ -65,7 +85,7 @@ Once you download the datasets, you need to adjust the paths in
 | SAT | Area Threshold | Uniform | [0,1] |
 
 
-## <a name="Run code"> Run code</a>: 
+## <a name="run"> Run code</a>: 
 To present the WSOL baselines with CAM over CUB using ResNet50, and for other methods by simply replacing the method name and indicating the model-specific parameter as detailed above:
 ```shell
 cudaid=0  # cudaid=$1
