@@ -1,7 +1,7 @@
 # [A Realistic Protocol for Evaluation of Weakly Supervised Object Localization](https://arxiv.org/pdf/2404.10034)
 
 
-by Shakeeb Murtaza<sup>1</sup>, Soufiane Belharbi<sup>1</sup>, Marco Pedersoli<sup>1</sup>, Eric Granger<sup>1</sup>
+by **Shakeeb Murtaza**<sup>1</sup>, **Soufiane Belharbi**<sup>1</sup>, **Marco Pedersoli**<sup>1</sup>, **Eric Granger**<sup>1</sup>
 
 <sup>1</sup>  LIVIA, Dept. of Systems Engineering, ETS Montreal, Canada
 <br/>
