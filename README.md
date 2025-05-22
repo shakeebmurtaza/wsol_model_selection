@@ -1,7 +1,9 @@
-# [A Realistic Protocol for Evaluation of Weakly Supervised Object Localization](https://arxiv.org/pdf/2404.10034)
+# [A Realistic Protocol for Evaluation of Weakly Supervised Object Localization (WACV2025)](https://arxiv.org/pdf/2404.10034)
 
 
 by **Shakeeb Murtaza**<sup>1</sup>, **Soufiane Belharbi**<sup>1</sup>, **Marco Pedersoli**<sup>1</sup>, **Eric Granger**<sup>1</sup>
+
+
 
 <sup>1</sup>  LIVIA, Dept. of Systems Engineering, ETS Montreal, Canada
 <br/>
@@ -11,18 +13,19 @@ by **Shakeeb Murtaza**<sup>1</sup>, **Soufiane Belharbi**<sup>1</sup>, **Marco P
 
 <p align="center"><img src="doc/wsol_eval_issue.jpg" alt="outline" width="85%"></p>
 
+
+
 ## Abstract
 Weakly Supervised Object Localization (WSOL) allows training deep learning models for classification and localization (LOC) using only global class-level labels. The absence of bounding box (bbox) supervision during training raises challenges in the literature for hyper-parameter tuning, model selection, and evaluation. WSOL methods rely on a validation set with bbox annotations for model selection, and a test set with bbox annotations for threshold estimation for producing bboxes from localization maps. This approach, however, is not aligned with the WSOL setting as these annotations are typically unavailable in real-world scenarios. Our initial empirical analysis shows a significant decline in LOC performance when model selection and threshold estimation rely solely on class labels and the image itself, respectively, compared to using manual bbox annotations. This highlights the importance of incorporating bbox labels for optimal model performance. In this paper, a new WSOL evaluation protocol is proposed that provides LOC information without the need for manual bbox annotations. In particular, we generated noisy pseudo-boxes from a pretrained off-the-shelf region proposal method such as Selective Search, CLIP, and RPN for model selection. These bboxes are also employed to estimate the threshold from LOC maps, circumventing the need for test-set bbox annotations. Our experiments with several WSOL methods on ILSVRC and CUB datasets show that using the proposed pseudo-bboxes for validation facilitates the model selection and threshold estimation, with LOC performance comparable to those selected using GT bboxes on the validation set and threshold estimation on the test set. It also outperforms models selected using class-level labels, and then dynamically thresholded based solely on LOC maps.
 
 
 ### Citation:
 ```
-@article{murtaza24,
-  title   = {Realistic Model Selection for Weakly Supervised Object Localization},
-  author  = {S. Murtaza and S. Belharbi and M. Pedersoli and E. Granger},
-  journal = {CoRR},
-  volume  = {abs/2404.10034},
-  year    = {2024}
+@article{murtaza25realisticproto,
+  title={A realistic protocol for evaluation of weakly supervised object localization},
+  author={Murtaza, S. and Belharbi, S. and Pedersoli, M. and Granger, E.},
+  booktitle={WACV},
+  year={2025}
 }
 ```
 
